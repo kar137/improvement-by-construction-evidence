@@ -1,0 +1,15 @@
+{
+    "dataset_name": "sambodhan/misclassified_department_dataset",
+    "version_tag": "v20251028_012945",
+    "label_column": "department",
+    "created_at": "2025-10-28T01:29:48.274009+00:00",
+    "commit_message": "Dataset update (department) - 20251028_012945",
+    "num_samples": 8426,
+    "splits": {
+        "train": 6740,
+        "eval": 843,
+        "test": 843
+    },
+    "author": "mr-kush",
+    "description": "Processed and versioned dataset for department classification."
+}

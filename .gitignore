@@ -1,0 +1,7 @@
+# Never publish the gold slice: it carries real portal grievance text.
+# scripts/check_release_safety.py enforces this.
+data/gold_slice.csv
+
+__pycache__/
+*.pyc
+.fig-preview/

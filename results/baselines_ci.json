@@ -1,0 +1,652 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    42
+  ],
+  "n_bootstrap": 2000,
+  "baseline": "TfidfVectorizer(char_wb, (2,5), min_df=2, sublinear_tf) + LogisticRegression(max_iter=2000, C=5)",
+  "reported_xlmr_for_comparison": {
+    "urgency_test": {
+      "acc": 0.9344,
+      "macro_f1": 0.9362,
+      "source": "notebooks/Urgency_classifier.ipynb cell 7 (n=900)"
+    },
+    "department_test": {
+      "acc": 0.97,
+      "macro_f1": 0.97,
+      "source": "notebooks/train_dept_classifier.ipynb cell 53 (n=600; selection-contaminated -- eval_dataset == test split)"
+    }
+  },
+  "original_corpus": {
+    "urgency": {
+      "accuracy": {
+        "mean": 0.9324444444444445,
+        "sd": 0.00659217643297389,
+        "min": 0.9255555555555556,
+        "max": 0.94,
+        "values": [
+          0.9388888888888889,
+          0.9255555555555556,
+          0.9277777777777778,
+          0.93,
+          0.94
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.9340503865891108,
+        "sd": 0.006343231879595135,
+        "min": 0.9278894026019296,
+        "max": 0.9414011209079333,
+        "values": [
+          0.94030408471128,
+          0.9278894026019296,
+          0.929293253903784,
+          0.9313640708206271,
+          0.9414011209079333
+        ]
+      },
+      "leakfree_accuracy": {
+        "mean": 0.9163893701737174,
+        "sd": 0.008900753573318427,
+        "min": 0.9056338028169014,
+        "max": 0.927321668909825,
+        "values": [
+          0.9233983286908078,
+          0.9056338028169014,
+          0.910958904109589,
+          0.9146341463414634,
+          0.927321668909825
+        ]
+      },
+      "leakfree_n": {
+        "mean": 727.8,
+        "sd": 13.718600511714014,
+        "min": 710.0,
+        "max": 743.0,
+        "values": [
+          718.0,
+          710.0,
+          730.0,
+          738.0,
+          743.0
+        ]
+      },
+      "leakage_n": {
+        "mean": 172.2,
+        "sd": 13.718600511714014,
+        "min": 157.0,
+        "max": 190.0,
+        "values": [
+          182.0,
+          190.0,
+          170.0,
+          162.0,
+          157.0
+        ]
+      },
+      "leakage_pct": {
+        "mean": 19.13332,
+        "sd": 1.5242932385207248,
+        "min": 17.4444,
+        "max": 21.1111,
+        "values": [
+          20.2222,
+          21.1111,
+          18.8889,
+          18.0,
+          17.4444
+        ]
+      },
+      "bootstrap_seed42_test": {
+        "acc_mean": 0.939776111111111,
+        "acc_ci95": [
+          0.9233333333333333,
+          0.9544444444444444
+        ],
+        "macro_f1_mean": 0.9410732153155584,
+        "macro_f1_ci95": [
+          0.9247609307736102,
+          0.955460245912661
+        ],
+        "n_boot": 2000,
+        "n_test": 900
+      }
+    },
+    "department": {
+      "accuracy": {
+        "mean": 0.966,
+        "sd": 0.005602578771323867,
+        "min": 0.96,
+        "max": 0.975,
+        "values": [
+          0.96,
+          0.9633333333333334,
+          0.9666666666666667,
+          0.975,
+          0.965
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.9657199288739537,
+        "sd": 0.0057924661539784,
+        "min": 0.9593677110566283,
+        "max": 0.9750152050738123,
+        "values": [
+          0.9593677110566283,
+          0.9631870953988981,
+          0.9662070729116319,
+          0.9750152050738123,
+          0.9648225599287983
+        ]
+      },
+      "leakfree_accuracy": {
+        "mean": 0.9567796261718472,
+        "sd": 0.00704298461775291,
+        "min": 0.9483870967741935,
+        "max": 0.9676724137931034,
+        "values": [
+          0.9483870967741935,
+          0.9537815126050421,
+          0.9573560767590619,
+          0.9676724137931034,
+          0.9567010309278351
+        ]
+      },
+      "leakfree_n": {
+        "mean": 471.8,
+        "sd": 8.757853618324527,
+        "min": 464.0,
+        "max": 485.0,
+        "values": [
+          465.0,
+          476.0,
+          469.0,
+          464.0,
+          485.0
+        ]
+      },
+      "leakage_n": {
+        "mean": 128.2,
+        "sd": 8.757853618324527,
+        "min": 115.0,
+        "max": 136.0,
+        "values": [
+          135.0,
+          124.0,
+          131.0,
+          136.0,
+          115.0
+        ]
+      },
+      "leakage_pct": {
+        "mean": 21.366679999999995,
+        "sd": 1.459630471043956,
+        "min": 19.1667,
+        "max": 22.6667,
+        "values": [
+          22.5,
+          20.6667,
+          21.8333,
+          22.6667,
+          19.1667
+        ]
+      },
+      "bootstrap_seed42_test": {
+        "acc_mean": 0.964975,
+        "acc_ci95": [
+          0.95,
+          0.9783333333333334
+        ],
+        "macro_f1_mean": 0.9646721004275817,
+        "macro_f1_ci95": [
+          0.9490603148270784,
+          0.9788397876119637
+        ],
+        "n_boot": 2000,
+        "n_test": 600
+      }
+    }
+  },
+  "parity_adjudication": {
+    "urgency": {
+      "xlmr_reported_acc": 0.9344,
+      "linear_seed42_acc_ci95": [
+        0.9233333333333333,
+        0.9544444444444444
+      ],
+      "xlmr_inside_linear_ci": true,
+      "claim": "PARITY -- the reported XLM-R accuracy lies inside the linear baseline's 95% bootstrap CI, so the difference is not resolvable at this sample size. Do NOT write 'outperforms'."
+    },
+    "department": {
+      "xlmr_reported_acc": 0.97,
+      "linear_seed42_acc_ci95": [
+        0.95,
+        0.9783333333333334
+      ],
+      "xlmr_inside_linear_ci": true,
+      "claim": "PARITY -- the reported XLM-R accuracy lies inside the linear baseline's 95% bootstrap CI, so the difference is not resolvable at this sample size. Do NOT write 'outperforms'."
+    }
+  },
+  "parity_caveat": "The XLM-R figures are single-split point estimates from the repository's notebooks and carry no interval of their own, so these comparisons place a one-sided interval against a bare number. The department XLM-R figure is additionally selection-contaminated.",
+  "retraining_corpora": {
+    "misclassified_urgency_dataset@v20251030_111553": {
+      "eval_acc": {
+        "mean": 0.8466666666666667,
+        "sd": 0.0,
+        "min": 0.8466666666666667,
+        "max": 0.8466666666666667,
+        "values": [
+          0.8466666666666667,
+          0.8466666666666667,
+          0.8466666666666667,
+          0.8466666666666667,
+          0.8466666666666667
+        ]
+      },
+      "eval_f1": {
+        "mean": 0.8467703913248469,
+        "sd": 0.0,
+        "min": 0.8467703913248469,
+        "max": 0.8467703913248469,
+        "values": [
+          0.8467703913248469,
+          0.8467703913248469,
+          0.8467703913248469,
+          0.8467703913248469,
+          0.8467703913248469
+        ]
+      },
+      "test_acc": {
+        "mean": 0.8933333333333333,
+        "sd": 0.0,
+        "min": 0.8933333333333333,
+        "max": 0.8933333333333333,
+        "values": [
+          0.8933333333333333,
+          0.8933333333333333,
+          0.8933333333333333,
+          0.8933333333333333,
+          0.8933333333333333
+        ]
+      },
+      "test_f1": {
+        "mean": 0.8951877577745828,
+        "sd": 1.2412670766236366e-16,
+        "min": 0.8951877577745827,
+        "max": 0.8951877577745827,
+        "values": [
+          0.8951877577745827,
+          0.8951877577745827,
+          0.8951877577745827,
+          0.8951877577745827,
+          0.8951877577745827
+        ]
+      },
+      "note": "attributable to promotion v20251030_114839 (Task B)",
+      "rows": {
+        "train": 1200,
+        "eval": 150,
+        "test": 150
+      },
+      "bootstrap_eval": {
+        "acc_mean": 0.84724,
+        "acc_ci95": [
+          0.7866666666666666,
+          0.9066666666666666
+        ],
+        "macro_f1_mean": 0.8460750749281081,
+        "macro_f1_ci95": [
+          0.7856823395423179,
+          0.9020850697714483
+        ],
+        "n_boot": 2000,
+        "n_test": 150
+      },
+      "bootstrap_test": {
+        "acc_mean": 0.8929433333333333,
+        "acc_ci95": [
+          0.84,
+          0.94
+        ],
+        "macro_f1_mean": 0.8938481933726259,
+        "macro_f1_ci95": [
+          0.8421183560445682,
+          0.9411528453320357
+        ],
+        "n_boot": 2000,
+        "n_test": 150
+      },
+      "seed_sensitivity": "none -- identical across all five seeds (deterministic given fixed splits)"
+    },
+    "misclassified_urgency_dataset@v20251028_015640": {
+      "eval_acc": {
+        "mean": 0.917695473251029,
+        "sd": 1.2412670766236366e-16,
+        "min": 0.9176954732510288,
+        "max": 0.9176954732510288,
+        "values": [
+          0.9176954732510288,
+          0.9176954732510288,
+          0.9176954732510288,
+          0.9176954732510288,
+          0.9176954732510288
+        ]
+      },
+      "eval_f1": {
+        "mean": 0.9186416280926482,
+        "sd": 0.0,
+        "min": 0.9186416280926482,
+        "max": 0.9186416280926482,
+        "values": [
+          0.9186416280926482,
+          0.9186416280926482,
+          0.9186416280926482,
+          0.9186416280926482,
+          0.9186416280926482
+        ]
+      },
+      "test_acc": {
+        "mean": 0.9218106995884774,
+        "sd": 0.0,
+        "min": 0.9218106995884774,
+        "max": 0.9218106995884774,
+        "values": [
+          0.9218106995884774,
+          0.9218106995884774,
+          0.9218106995884774,
+          0.9218106995884774,
+          0.9218106995884774
+        ]
+      },
+      "test_f1": {
+        "mean": 0.9223871816626072,
+        "sd": 0.0,
+        "min": 0.9223871816626072,
+        "max": 0.9223871816626072,
+        "values": [
+          0.9223871816626072,
+          0.9223871816626072,
+          0.9223871816626072,
+          0.9223871816626072,
+          0.9223871816626072
+        ]
+      },
+      "note": "attributable to promotion v20251028_150816 (Task B)",
+      "rows": {
+        "train": 1940,
+        "eval": 243,
+        "test": 243
+      },
+      "bootstrap_eval": {
+        "acc_mean": 0.9180864197530864,
+        "acc_ci95": [
+          0.8806584362139918,
+          0.9506172839506173
+        ],
+        "macro_f1_mean": 0.9185908432662893,
+        "macro_f1_ci95": [
+          0.8825729114075311,
+          0.9511641484611179
+        ],
+        "n_boot": 2000,
+        "n_test": 243
+      },
+      "bootstrap_test": {
+        "acc_mean": 0.9214794238683128,
+        "acc_ci95": [
+          0.8847736625514403,
+          0.9547325102880658
+        ],
+        "macro_f1_mean": 0.9216321774448045,
+        "macro_f1_ci95": [
+          0.8867457603651138,
+          0.9545877157482775
+        ],
+        "n_boot": 2000,
+        "n_test": 243
+      },
+      "seed_sensitivity": "sd = 0.00000"
+    },
+    "misclassified_urgency_dataset@v20251030_115250": {
+      "eval_acc": {
+        "mean": 0.91875,
+        "sd": 0.0,
+        "min": 0.91875,
+        "max": 0.91875,
+        "values": [
+          0.91875,
+          0.91875,
+          0.91875,
+          0.91875,
+          0.91875
+        ]
+      },
+      "eval_f1": {
+        "mean": 0.9209096983177855,
+        "sd": 0.0,
+        "min": 0.9209096983177855,
+        "max": 0.9209096983177855,
+        "values": [
+          0.9209096983177855,
+          0.9209096983177855,
+          0.9209096983177855,
+          0.9209096983177855,
+          0.9209096983177855
+        ]
+      },
+      "test_acc": {
+        "mean": 0.91875,
+        "sd": 0.0,
+        "min": 0.91875,
+        "max": 0.91875,
+        "values": [
+          0.91875,
+          0.91875,
+          0.91875,
+          0.91875,
+          0.91875
+        ]
+      },
+      "test_f1": {
+        "mean": 0.9205501518509397,
+        "sd": 1.2412670766236366e-16,
+        "min": 0.9205501518509398,
+        "max": 0.9205501518509398,
+        "values": [
+          0.9205501518509398,
+          0.9205501518509398,
+          0.9205501518509398,
+          0.9205501518509398,
+          0.9205501518509398
+        ]
+      },
+      "note": "HEAD; the revision the audit measured; post-dates the last promotion by 4 min",
+      "rows": {
+        "train": 1280,
+        "eval": 160,
+        "test": 160
+      },
+      "bootstrap_eval": {
+        "acc_mean": 0.91866875,
+        "acc_ci95": [
+          0.875,
+          0.9625
+        ],
+        "macro_f1_mean": 0.9200604217753667,
+        "macro_f1_ci95": [
+          0.8764261322930763,
+          0.9616011501150725
+        ],
+        "n_boot": 2000,
+        "n_test": 160
+      },
+      "bootstrap_test": {
+        "acc_mean": 0.918709375,
+        "acc_ci95": [
+          0.875,
+          0.95625
+        ],
+        "macro_f1_mean": 0.919893454803459,
+        "macro_f1_ci95": [
+          0.8764500964069221,
+          0.9569899908245582
+        ],
+        "n_boot": 2000,
+        "n_test": 160
+      },
+      "seed_sensitivity": "none -- identical across all five seeds (deterministic given fixed splits)"
+    },
+    "misclassified_department_dataset@v20251028_015634": {
+      "eval_acc": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "eval_f1": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "test_acc": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "test_f1": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "note": "HEAD; post-dates ALL five department promotions; no attributable revision exists",
+      "rows": {
+        "train": 1940,
+        "eval": 243,
+        "test": 243
+      },
+      "bootstrap_eval": {
+        "acc_mean": 1.0,
+        "acc_ci95": [
+          1.0,
+          1.0
+        ],
+        "macro_f1_mean": 1.0,
+        "macro_f1_ci95": [
+          1.0,
+          1.0
+        ],
+        "n_boot": 2000,
+        "n_test": 243
+      },
+      "bootstrap_test": {
+        "acc_mean": 1.0,
+        "acc_ci95": [
+          1.0,
+          1.0
+        ],
+        "macro_f1_mean": 1.0,
+        "macro_f1_ci95": [
+          1.0,
+          1.0
+        ],
+        "n_boot": 2000,
+        "n_test": 243
+      },
+      "seed_sensitivity": "none -- identical across all five seeds (deterministic given fixed splits)"
+    }
+  },
+  "linear_vs_promoted_gap": {
+    "v20251030_111553": {
+      "promotion": "v20251030_114839",
+      "attribution": "ATTRIBUTED",
+      "attribution_basis": "This dataset revision was pushed 33 min BEFORE the promotion, and the promotion's model card arithmetic independently confirms it: step 50 = epoch 0.6667 implies 75 steps/epoch hence n_train = 1200, and 0.6867 x 150 = 103 exactly. Both models are therefore scored on the SAME published eval split.",
+      "promoted_transformer_reported_eval_acc": 0.6867,
+      "promoted_transformer_reported_eval_f1_macro": 0.6909,
+      "linear_eval_acc": 0.8467,
+      "linear_eval_acc_ci95": [
+        0.7867,
+        0.9067
+      ],
+      "gap_accuracy_points": 16.0,
+      "gap_ci95_points": [
+        10.0,
+        22.0
+      ],
+      "claim_strength": "ALREADY DEMONSTRATED -- like-for-like on the same published eval split",
+      "note": "The transformer figure is the pipeline's own reported number and carries no interval of its own; the interval shown is the linear baseline's."
+    },
+    "v20251028_015640": {
+      "promotion": "v20251028_150816",
+      "attribution": "ATTRIBUTED",
+      "attribution_basis": "Pushed 13.2 h BEFORE the promotion; card arithmetic gives 122 steps/epoch hence n_train in [1937,1952] (published: 1940), and 0.7695 x 243 = 187 exactly. Same published eval split.",
+      "promoted_transformer_reported_eval_acc": 0.7695,
+      "promoted_transformer_reported_eval_f1_macro": 0.7609,
+      "linear_eval_acc": 0.9177,
+      "linear_eval_acc_ci95": [
+        0.8807,
+        0.9506
+      ],
+      "gap_accuracy_points": 14.82,
+      "gap_ci95_points": [
+        11.12,
+        18.11
+      ],
+      "claim_strength": "ALREADY DEMONSTRATED -- like-for-like on the same published eval split",
+      "note": "The transformer figure is the pipeline's own reported number and carries no interval of its own; the interval shown is the linear baseline's."
+    },
+    "v20251028_015634": {
+      "promotion": "v20251027_143006",
+      "attribution": "NOT ESTABLISHED",
+      "attribution_basis": "This revision post-dates the promotion by ~11.4 h, and the department dataset repository did not exist at promotion time. The card's arithmetic (122 steps/epoch, n_train in [1937,1952]) is CONSISTENT with this corpus's 1,940-row train split, but consistency with a size window is not identification. The two numbers are NOT known to be on the same eval split.",
+      "promoted_transformer_reported_eval_acc": 1.0,
+      "promoted_transformer_reported_eval_f1_macro": 1.0,
+      "linear_eval_acc": 1.0,
+      "linear_eval_acc_ci95": [
+        1.0,
+        1.0
+      ],
+      "gap_accuracy_points": 0.0,
+      "gap_ci95_points": [
+        0.0,
+        0.0
+      ],
+      "claim_strength": "SUGGESTED BY EVIDENCE -- the two numbers are NOT established to be on the same eval split; do not present this as a like-for-like gap",
+      "note": "The transformer figure is the pipeline's own reported number and carries no interval of its own; the interval shown is the linear baseline's."
+    }
+  },
+  "leakage_verdict": "The seed-42 leakage figures the paper quotes (urgency 17.44%, department 19.17%) sit inside the across-seed range, so they are typical of the procedure rather than an unlucky draw. All figures are exact-match-after-normalisation and are therefore LOWER BOUNDS: near-duplicates are not counted."
+}

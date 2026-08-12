@@ -1,0 +1,15 @@
+{
+    "dataset_name": "sambodhan/misclassified_urgency_dataset",
+    "version_tag": "v20251030_115250",
+    "label_column": "urgency",
+    "created_at": "2025-10-30T11:53:01.110260+00:00",
+    "commit_message": "Dataset update (urgency) - 20251030_115250",
+    "num_samples": 1600,
+    "splits": {
+        "train": 1280,
+        "eval": 160,
+        "test": 160
+    },
+    "author": "mr-kush",
+    "description": "Processed and versioned dataset for urgency classification."
+}

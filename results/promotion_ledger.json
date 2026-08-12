@@ -1,0 +1,468 @@
+{
+  "method": "For every `Auto-deploy` commit in both model repositories this script fetches the\nmodel card as it stood AT THAT COMMIT and parses the Trainer-generated\n\"Training results\" table. That table leaks the size of the corpus the run was\ntrained on, in two independent ways:\n\n  (1) steps-per-epoch.  The table prints (step, epoch) pairs. Since\n      steps_per_epoch = ceil(n_train / train_batch_size) and epoch = step /\n      steps_per_epoch, a printed epoch pins steps_per_epoch exactly, which\n      brackets n_train to a 16-row window (batch size 16).\n\n  (2) the accuracy denominator.  Reported accuracy is k / n_eval for integer k,\n      so candidate n_eval values that cannot produce the printed accuracy at the\n      printed precision are excluded.\n\nNeither signal comes from a timestamp, so together they test the timestamp-based\nattribution in results/dataset_revisions.json rather than assuming it.\n\nOutput: results/promotion_ledger.json\nUsage:  PYTHONIOENCODING=utf-8 python promotion_ledger.py",
+  "batch_size_assumed": 16,
+  "promotions": [
+    {
+      "task": "urgency",
+      "repo": "kar137/sambodhan-urgency-classifier",
+      "version": "v20251028_150816",
+      "commit": "19466adb6226fbd2a9abe85cd1027f6e14f5f64e",
+      "date_utc": "2025-10-28T15:08:24.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0010 (v20251028_150816)",
+      "threshold": 0.001,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.0431,
+        "accuracy": 0.7695,
+        "f1_macro": 0.7609,
+        "f1_weighted": 0.7589,
+        "precision_macro": 0.7734,
+        "recall_macro": 0.7742,
+        "precision_weighted": 0.7743,
+        "recall_weighted": 0.7695
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.1228,
+          "epoch": 0.4098,
+          "step": 50,
+          "val_loss": 0.1201,
+          "accuracy": 0.3539
+        },
+        {
+          "train_loss": 0.1198,
+          "epoch": 0.8197,
+          "step": 100,
+          "val_loss": 0.104,
+          "accuracy": 0.5103
+        },
+        {
+          "train_loss": 0.0883,
+          "epoch": 1.2295,
+          "step": 150,
+          "val_loss": 0.0729,
+          "accuracy": 0.6584
+        },
+        {
+          "train_loss": 0.0687,
+          "epoch": 1.6393,
+          "step": 200,
+          "val_loss": 0.0479,
+          "accuracy": 0.7654
+        },
+        {
+          "train_loss": 0.0568,
+          "epoch": 2.0492,
+          "step": 250,
+          "val_loss": 0.0431,
+          "accuracy": 0.7695
+        }
+      ],
+      "steps_per_epoch": 122,
+      "n_train_window": [
+        1937,
+        1952
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251028_015640",
+          "n_train": 1940,
+          "n_eval": 243,
+          "data_push_utc": "2025-10-28T01:56:44Z"
+        }
+      ],
+      "timestamp_attribution": "v20251028_015640",
+      "timestamp_attribution_status": "ATTRIBUTED",
+      "corroboration": "CONFIRMED"
+    },
+    {
+      "task": "urgency",
+      "repo": "kar137/sambodhan-urgency-classifier",
+      "version": "v20251030_114839",
+      "commit": "e04b4076b90cfdf56e0643a61d035fc9ca7f0e22",
+      "date_utc": "2025-10-30T11:48:53.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0010 (v20251030_114839)",
+      "threshold": 0.001,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.0687,
+        "accuracy": 0.6867,
+        "f1_macro": 0.6909,
+        "f1_weighted": 0.69,
+        "precision_macro": 0.7047,
+        "recall_macro": 0.6878,
+        "precision_weighted": 0.7039,
+        "recall_weighted": 0.6867
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.123,
+          "epoch": 0.6667,
+          "step": 50,
+          "val_loss": 0.1217,
+          "accuracy": 0.3333
+        },
+        {
+          "train_loss": 0.1191,
+          "epoch": 1.3333,
+          "step": 100,
+          "val_loss": 0.0996,
+          "accuracy": 0.5333
+        },
+        {
+          "train_loss": 0.0918,
+          "epoch": 2.0,
+          "step": 150,
+          "val_loss": 0.0881,
+          "accuracy": 0.5933
+        },
+        {
+          "train_loss": 0.0674,
+          "epoch": 2.6667,
+          "step": 200,
+          "val_loss": 0.0687,
+          "accuracy": 0.6867
+        }
+      ],
+      "steps_per_epoch": 75,
+      "n_train_window": [
+        1185,
+        1200
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251030_111553",
+          "n_train": 1200,
+          "n_eval": 150,
+          "data_push_utc": "2025-10-30T11:16:03Z"
+        }
+      ],
+      "timestamp_attribution": "v20251030_111553",
+      "timestamp_attribution_status": "ATTRIBUTED",
+      "corroboration": "CONFIRMED"
+    },
+    {
+      "task": "department",
+      "repo": "mr-kush/sambodhan-department-classification-model",
+      "version": "v20251023_011818",
+      "commit": "6d3c6bab5debd75eec30669f9bc447eaea0fe153",
+      "date_utc": "2025-10-23T01:19:29.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0000 (v20251023_011818)",
+      "threshold": 0.0,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.0209,
+        "accuracy": 0.9417,
+        "f1_macro": 0.9417,
+        "f1_weighted": 0.9419,
+        "precision_macro": 0.9375,
+        "recall_macro": 0.948,
+        "precision_weighted": 0.9445,
+        "recall_weighted": 0.9417
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.1451,
+          "epoch": 0.1667,
+          "step": 50,
+          "val_loss": 0.0692,
+          "accuracy": 0.8067
+        },
+        {
+          "train_loss": 0.0424,
+          "epoch": 0.3333,
+          "step": 100,
+          "val_loss": 0.0181,
+          "accuracy": 0.9583
+        },
+        {
+          "train_loss": 0.0219,
+          "epoch": 0.5,
+          "step": 150,
+          "val_loss": 0.0209,
+          "accuracy": 0.9417
+        }
+      ],
+      "steps_per_epoch": 300,
+      "n_train_window": [
+        4785,
+        4800
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251028_015507",
+          "n_train": 4800,
+          "n_eval": 600,
+          "data_push_utc": "2025-10-28T01:55:10Z"
+        }
+      ],
+      "timestamp_attribution": null,
+      "timestamp_attribution_status": "NO PRECEDING DATASET REVISION EXISTS",
+      "corroboration": "CARD-ARITHMETIC ONLY (no revision predates this promotion)"
+    },
+    {
+      "task": "department",
+      "repo": "mr-kush/sambodhan-department-classification-model",
+      "version": "v20251023_012846",
+      "commit": "adce36aeaccb9f8247654f19572b7c742c1eef7b",
+      "date_utc": "2025-10-23T01:29:43.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0000 (v20251023_012846)",
+      "threshold": 0.0,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.0156,
+        "accuracy": 0.9667,
+        "f1_macro": 0.9655,
+        "f1_weighted": 0.9666,
+        "precision_macro": 0.9671,
+        "recall_macro": 0.964,
+        "precision_weighted": 0.9668,
+        "recall_weighted": 0.9667
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.1763,
+          "epoch": 0.1667,
+          "step": 50,
+          "val_loss": 0.1054,
+          "accuracy": 0.7133
+        },
+        {
+          "train_loss": 0.065,
+          "epoch": 0.3333,
+          "step": 100,
+          "val_loss": 0.0232,
+          "accuracy": 0.9417
+        },
+        {
+          "train_loss": 0.0253,
+          "epoch": 0.5,
+          "step": 150,
+          "val_loss": 0.0235,
+          "accuracy": 0.945
+        },
+        {
+          "train_loss": 0.0133,
+          "epoch": 0.6667,
+          "step": 200,
+          "val_loss": 0.0187,
+          "accuracy": 0.965
+        },
+        {
+          "train_loss": 0.0126,
+          "epoch": 0.8333,
+          "step": 250,
+          "val_loss": 0.0158,
+          "accuracy": 0.97
+        },
+        {
+          "train_loss": 0.0109,
+          "epoch": 1.0,
+          "step": 300,
+          "val_loss": 0.0156,
+          "accuracy": 0.9667
+        }
+      ],
+      "steps_per_epoch": 300,
+      "n_train_window": [
+        4785,
+        4800
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251028_015507",
+          "n_train": 4800,
+          "n_eval": 600,
+          "data_push_utc": "2025-10-28T01:55:10Z"
+        }
+      ],
+      "timestamp_attribution": null,
+      "timestamp_attribution_status": "NO PRECEDING DATASET REVISION EXISTS",
+      "corroboration": "CARD-ARITHMETIC ONLY (no revision predates this promotion)"
+    },
+    {
+      "task": "department",
+      "repo": "mr-kush/sambodhan-department-classification-model",
+      "version": "v20251027_123835",
+      "commit": "f6de956428cbd02d372bf657c17de794fe375206",
+      "date_utc": "2025-10-27T12:38:48.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0010 (v20251027_123835)",
+      "threshold": 0.001,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.001,
+        "accuracy": 0.9918,
+        "f1_macro": 0.9917,
+        "f1_weighted": 0.9918,
+        "precision_macro": 0.9919,
+        "recall_macro": 0.9918,
+        "precision_weighted": 0.992,
+        "recall_weighted": 0.9918
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.1393,
+          "epoch": 0.4098,
+          "step": 50,
+          "val_loss": 0.0309,
+          "accuracy": 0.9177
+        },
+        {
+          "train_loss": 0.017,
+          "epoch": 0.8197,
+          "step": 100,
+          "val_loss": 0.0005,
+          "accuracy": 1.0
+        },
+        {
+          "train_loss": 0.0018,
+          "epoch": 1.2295,
+          "step": 150,
+          "val_loss": 0.001,
+          "accuracy": 0.9918
+        }
+      ],
+      "steps_per_epoch": 122,
+      "n_train_window": [
+        1937,
+        1952
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251028_015634",
+          "n_train": 1940,
+          "n_eval": 243,
+          "data_push_utc": "2025-10-28T01:56:38Z"
+        }
+      ],
+      "timestamp_attribution": null,
+      "timestamp_attribution_status": "NO PRECEDING DATASET REVISION EXISTS",
+      "corroboration": "CARD-ARITHMETIC ONLY (no revision predates this promotion)"
+    },
+    {
+      "task": "department",
+      "repo": "mr-kush/sambodhan-department-classification-model",
+      "version": "v20251027_133806",
+      "commit": "fc1c84c4bfad356ae4a4c006dfdf0f0c548f7f27",
+      "date_utc": "2025-10-27T13:38:16.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0010 (v20251027_133806)",
+      "threshold": 0.001,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.0008,
+        "accuracy": 0.9959,
+        "f1_macro": 0.9959,
+        "f1_weighted": 0.9959,
+        "precision_macro": 0.9959,
+        "recall_macro": 0.9959,
+        "precision_weighted": 0.996,
+        "recall_weighted": 0.9959
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.1695,
+          "epoch": 0.4098,
+          "step": 50,
+          "val_loss": 0.0976,
+          "accuracy": 0.8436
+        },
+        {
+          "train_loss": 0.042,
+          "epoch": 0.8197,
+          "step": 100,
+          "val_loss": 0.0021,
+          "accuracy": 0.9959
+        },
+        {
+          "train_loss": 0.0046,
+          "epoch": 1.2295,
+          "step": 150,
+          "val_loss": 0.0001,
+          "accuracy": 1.0
+        },
+        {
+          "train_loss": 0.0012,
+          "epoch": 1.6393,
+          "step": 200,
+          "val_loss": 0.0008,
+          "accuracy": 0.9959
+        }
+      ],
+      "steps_per_epoch": 122,
+      "n_train_window": [
+        1937,
+        1952
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251028_015634",
+          "n_train": 1940,
+          "n_eval": 243,
+          "data_push_utc": "2025-10-28T01:56:38Z"
+        }
+      ],
+      "timestamp_attribution": null,
+      "timestamp_attribution_status": "NO PRECEDING DATASET REVISION EXISTS",
+      "corroboration": "CARD-ARITHMETIC ONLY (no revision predates this promotion)"
+    },
+    {
+      "task": "department",
+      "repo": "mr-kush/sambodhan-department-classification-model",
+      "version": "v20251027_143006",
+      "commit": "2064bafde9d4cf102e5401bd6d31362596d10425",
+      "date_utc": "2025-10-27T14:30:20.000Z",
+      "title": "Auto-deploy: ΔF1 >= 0.0010 (v20251027_143006)",
+      "threshold": 0.001,
+      "card_archived": true,
+      "eval_metrics": {
+        "loss": 0.0,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "f1_weighted": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "precision_weighted": 1.0,
+        "recall_weighted": 1.0
+      },
+      "training_rows": [
+        {
+          "train_loss": 0.1491,
+          "epoch": 0.4098,
+          "step": 50,
+          "val_loss": 0.0482,
+          "accuracy": 0.8724
+        },
+        {
+          "train_loss": 0.0255,
+          "epoch": 0.8197,
+          "step": 100,
+          "val_loss": 0.0009,
+          "accuracy": 1.0
+        },
+        {
+          "train_loss": 0.0015,
+          "epoch": 1.2295,
+          "step": 150,
+          "val_loss": 0.0,
+          "accuracy": 1.0
+        }
+      ],
+      "steps_per_epoch": 122,
+      "n_train_window": [
+        1937,
+        1952
+      ],
+      "revisions_compatible_with_card_arithmetic": [
+        {
+          "version": "v20251028_015634",
+          "n_train": 1940,
+          "n_eval": 243,
+          "data_push_utc": "2025-10-28T01:56:38Z"
+        }
+      ],
+      "timestamp_attribution": null,
+      "timestamp_attribution_status": "NO PRECEDING DATASET REVISION EXISTS",
+      "corroboration": "CARD-ARITHMETIC ONLY (no revision predates this promotion)"
+    }
+  ]
+}

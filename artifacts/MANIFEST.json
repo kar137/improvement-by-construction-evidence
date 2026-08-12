@@ -1,0 +1,782 @@
+{
+  "generated_utc": "2026-08-11T19:08:40Z",
+  "generator": "paper1-evidence/scripts/fetch_artifacts.py",
+  "purpose": "Dated, hash-addressed archive of every external artifact cited by Paper 1. Mitigates the reviewer objection that the evidence lives in repositories controlled by the paper's own authors.",
+  "local_repository": {
+    "head_sha": "9b37728e2b4a68088300889090627030f8994af2",
+    "commit_date": "2025-11-28T20:14:46+05:45",
+    "subject": "Clean up flowchart formatting in README",
+    "status_porcelain": "",
+    "clean": true
+  },
+  "pinned_model_revisions": {
+    "urgency_PRE": "e3a249c1ff8e",
+    "urgency_POST": "2e3ae2505f15784bd7866abcda1d6655a4f19575"
+  },
+  "dataset_versions": {
+    "sambodhan/misclassified_urgency_dataset": [
+      {
+        "version": "v20251028_013035",
+        "commit": "b4b24afd263d"
+      },
+      {
+        "version": "v20251028_015512",
+        "commit": "c1522e890b09"
+      },
+      {
+        "version": "v20251028_015640",
+        "commit": "e4914bb5006c"
+      },
+      {
+        "version": "v20251030_111553",
+        "commit": "99ece0015d19"
+      },
+      {
+        "version": "v20251030_115228",
+        "commit": "979c4282ad15"
+      },
+      {
+        "version": "v20251030_115250",
+        "commit": "9d76f4a4af29"
+      }
+    ],
+    "sambodhan/misclassified_department_dataset": [
+      {
+        "version": "v20251028_012945",
+        "commit": "4931835a4641"
+      },
+      {
+        "version": "v20251028_015507",
+        "commit": "0062d1af3957"
+      },
+      {
+        "version": "v20251028_015634",
+        "commit": "3d0564c4813c"
+      }
+    ]
+  },
+  "item_count": 75,
+  "items": [
+    {
+      "url": "https://huggingface.co/api/models/kar137/sambodhan-urgency-classifier/commits/main",
+      "path": "commits_models_kar137_sambodhan-urgency-classifier.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "af2ddb323fca4f353a3cdc72798daa913a41e8bd542fc09cacf77aa15c9f2be4",
+      "bytes": 4508
+    },
+    {
+      "url": "https://huggingface.co/api/models/mr-kush/sambodhan-department-classification-model/commits/main",
+      "path": "commits_models_mr-kush_sambodhan-department-classification-model.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "63f623f0718bcb4db8746884ec8cb1749797455424bf88154fb317134738243a",
+      "bytes": 3121
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/sambodhan/misclassified_urgency_dataset/commits/main",
+      "path": "commits_datasets_sambodhan_misclassified_urgency_dataset.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "4f2400e1cd776bda4f3a80178f61a7311d94a501233d4d108e08b505b7ecf26c",
+      "bytes": 5302
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/sambodhan/misclassified_department_dataset/commits/main",
+      "path": "commits_datasets_sambodhan_misclassified_department_dataset.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "c6042d199e8ec467d0d902d40d2d733225733ad03313df89665d73dbd17d1887",
+      "bytes": 2788
+    },
+    {
+      "url": "https://huggingface.co/api/models/kar137/sambodhan-urgency-classifier",
+      "path": "repoinfo_models_kar137_sambodhan-urgency-classifier.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "372235273eb86bcdb838c8006da929b8b098c260faa4a90a76f372fe5a313848",
+      "bytes": 2668
+    },
+    {
+      "url": "https://huggingface.co/api/models/mr-kush/sambodhan-department-classification-model",
+      "path": "repoinfo_models_mr-kush_sambodhan-department-classification-model.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "7f1912bf6f8d7bd5f7ed95faad1c1566bd16428da3b2fa9d019cefe7ba83797d",
+      "bytes": 2011
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/sambodhan/misclassified_urgency_dataset",
+      "path": "repoinfo_datasets_sambodhan_misclassified_urgency_dataset.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "f46c9308c3ea7f0363928767e418d095c78de9277475efb21551df78fafd8552",
+      "bytes": 1901
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/sambodhan/misclassified_department_dataset",
+      "path": "repoinfo_datasets_sambodhan_misclassified_department_dataset.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "7066fad97b68fe6a81522f7442fc76b1a9533c3a119aa0ac986fd1a3ac9de082",
+      "bytes": 1876
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/e3a249c1ff8e/README.md",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__PRE_e3a249c1ff8e__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "05a0444980041ec5757e6c9755e1c611e741fd67929a49435e2e0abe1328ea29",
+      "bytes": 5216,
+      "note": "PRE revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/e3a249c1ff8e/config.json",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__PRE_e3a249c1ff8e__config.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "sha256": "29501077907d9c90aea39197250db4ddc1c9df361a4c7c7c84ebe11eaaff5ab0",
+      "bytes": 886,
+      "note": "PRE revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/e3a249c1ff8e/model_metadata.json",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__PRE_e3a249c1ff8e__model_metadata.json",
+      "absent_at_revision": true,
+      "reason": "HTTP error (curl --fail); for these repositories this is a 404 -- the file does not exist at this revision",
+      "retrieved_utc": "2026-08-11T19:08:38Z",
+      "note": "PRE revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/e3a249c1ff8e/training_metadata.json",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__PRE_e3a249c1ff8e__training_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "1eafff55e81de5c109b0a112c3d3c3dfcae98fe8d709795c39184c610a6243f4",
+      "bytes": 2155,
+      "note": "PRE revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/2e3ae2505f15784bd7866abcda1d6655a4f19575/README.md",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__POST_2e3ae2505f15__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "cf4b4ce95251e24fa2890fa6f78ad8b39b74bf79a2e1133d47249ed6892f4214",
+      "bytes": 2439,
+      "note": "POST revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/2e3ae2505f15784bd7866abcda1d6655a4f19575/config.json",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__POST_2e3ae2505f15__config.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "83daa402050842a40ea0892231423886df1515a78fc32fcbe7191878ed73e6fb",
+      "bytes": 887,
+      "note": "POST revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/2e3ae2505f15784bd7866abcda1d6655a4f19575/model_metadata.json",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__POST_2e3ae2505f15__model_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "3fcac0f84eb34661846a8aeec6f3c0048be4f52b710c15b2f20588d60f626fc6",
+      "bytes": 5308,
+      "note": "POST revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/2e3ae2505f15784bd7866abcda1d6655a4f19575/training_metadata.json",
+      "path": "model_cards/kar137_sambodhan-urgency-classifier__POST_2e3ae2505f15__training_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "1eafff55e81de5c109b0a112c3d3c3dfcae98fe8d709795c39184c610a6243f4",
+      "bytes": 2155,
+      "note": "POST revision of kar137/sambodhan-urgency-classifier"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/main/README.md",
+      "path": "model_cards/mr-kush_sambodhan-department-classification-model__HEAD_main__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "f37d044c532262ffc2ae7c9f8f332000bcbc0219132d0b90bae2456df85521b9",
+      "bytes": 2284,
+      "note": "HEAD revision of mr-kush/sambodhan-department-classification-model"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/main/config.json",
+      "path": "model_cards/mr-kush_sambodhan-department-classification-model__HEAD_main__config.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "d7c73463f6f428dbd5260cc3016d9e89961ce19a457f510a0e7bee4ca3dedacd",
+      "bytes": 1153,
+      "note": "HEAD revision of mr-kush/sambodhan-department-classification-model"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/main/model_metadata.json",
+      "path": "model_cards/mr-kush_sambodhan-department-classification-model__HEAD_main__model_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "6463672261e3143a077506f362514b2fd83533962def7ad3776ee318a8ff8ab9",
+      "bytes": 5330,
+      "note": "HEAD revision of mr-kush/sambodhan-department-classification-model"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/main/training_metadata.json",
+      "path": "model_cards/mr-kush_sambodhan-department-classification-model__HEAD_main__training_metadata.json",
+      "absent_at_revision": true,
+      "reason": "HTTP error (curl --fail); for these repositories this is a 404 -- the file does not exist at this revision",
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "note": "HEAD revision of mr-kush/sambodhan-department-classification-model"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/b4b24afd263d/README.md",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_013035/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "b5b3133fc1c8c111545728e3d6e7e5544d1c549bd8bc1cdb3a4a933ac814e781",
+      "bytes": 1250,
+      "dataset_version": "v20251028_013035"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/b4b24afd263d/dataset_metadata.json",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_013035/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "aa55be7be43ac9be8548f1b1ab0f75b9621fe8ad97da81dc36ca342bf3980523",
+      "bytes": 476,
+      "dataset_version": "v20251028_013035"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/b4b24afd263d/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_013035/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "0f0adb01f9c5fb4550cf2fa5a053bf504b3821601141c070987042f82f692bd4",
+      "bytes": 865797,
+      "dataset_version": "v20251028_013035",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/b4b24afd263d/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_013035/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "4bed0c4931a61f0c314a1c6a99f1d71ca96d9fdadc919828ef869848ddd5f8ea",
+      "bytes": 110164,
+      "dataset_version": "v20251028_013035",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/b4b24afd263d/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_013035/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "687c35b96d5be10f5ab3a2f759788930d02d25e100242dc9e3632348954cb741",
+      "bytes": 107281,
+      "dataset_version": "v20251028_013035",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/c1522e890b09/README.md",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015512/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "0e60ed4011ebf82eb8c7ba71dbfae58ffa434fa678b1d05add310075511392cf",
+      "bytes": 1250,
+      "dataset_version": "v20251028_015512"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/c1522e890b09/dataset_metadata.json",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015512/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "2050676dfa77d49449d690630a2deb7f5bbb6747424c9b76d94360c964772897",
+      "bytes": 476,
+      "dataset_version": "v20251028_015512"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/c1522e890b09/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015512/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "b869998dfc6f49987f5a512a4cedec9d8bc95fbf43bcb075924a43f68c1bcb60",
+      "bytes": 361190,
+      "dataset_version": "v20251028_015512",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/c1522e890b09/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015512/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "3648b730705c8c577bc8a134b09181bc4f61e6f198c4880f0cf6a3acf6c320a2",
+      "bytes": 46846,
+      "dataset_version": "v20251028_015512",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/c1522e890b09/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015512/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "639bf1e92c5fe7ba74e59a82afd3e38b9325771cc82b3bd01f6cc95b762fafce",
+      "bytes": 51380,
+      "dataset_version": "v20251028_015512",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/e4914bb5006c/README.md",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015640/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "39b4202485890479c3097fe81998bc6fdb98b9afcf2f24789910dea8eb5b23a9",
+      "bytes": 1250,
+      "dataset_version": "v20251028_015640"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/e4914bb5006c/dataset_metadata.json",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015640/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "e5f46e9be2148113fe54311982398c784c1115c280270dc47c64c9092b13a235",
+      "bytes": 476,
+      "dataset_version": "v20251028_015640"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/e4914bb5006c/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015640/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "91b96ab84e759574f4dfb12ec5d2d298a39ee955419e2c220941208788781d56",
+      "bytes": 397225,
+      "dataset_version": "v20251028_015640",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/e4914bb5006c/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015640/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "a4ba62b85d0132687ac9f921f91943a5bfda877fe66f896932b19fb68e67ee73",
+      "bytes": 55582,
+      "dataset_version": "v20251028_015640",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/e4914bb5006c/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251028_015640/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "324165545c5d45fd4fe5d1bffc478a820df713eee4c958cd49fc788df07413f6",
+      "bytes": 56703,
+      "dataset_version": "v20251028_015640",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/99ece0015d19/README.md",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_111553/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "b87600e906df066c0ad053c6302f8aa04d0f70c06a03266049a0d4aeb5f2c8d0",
+      "bytes": 1250,
+      "dataset_version": "v20251030_111553"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/99ece0015d19/dataset_metadata.json",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_111553/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "81e8a28a807a1a9c14a0656a78f0031eb83a2ce280e4e4717f62b287bfdc32c5",
+      "bytes": 476,
+      "dataset_version": "v20251030_111553"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/99ece0015d19/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_111553/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "8518a525c71d88365d8d0c12e8b6ea5e9fc8c0b1d5a27ae8274e0169250f1b2e",
+      "bytes": 249875,
+      "dataset_version": "v20251030_111553",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/99ece0015d19/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_111553/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "843c6ee59d2c4abdd0e0db798d0e9a861cc9e77d5541ccdbdfb9c8e6cdbb77f1",
+      "bytes": 33641,
+      "dataset_version": "v20251030_111553",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/99ece0015d19/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_111553/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "8865151ed4def476d523fd7d7b1eadeaff84b96baaeb682e30fad2d36be1e88e",
+      "bytes": 35553,
+      "dataset_version": "v20251030_111553",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/979c4282ad15/README.md",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115228/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "88e0edd8d386677dccbe04343141a8386ffa73cf0311aa400a7791d9e572170e",
+      "bytes": 1250,
+      "dataset_version": "v20251030_115228"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/979c4282ad15/dataset_metadata.json",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115228/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "e4f485d70de55dc818da9d4627ef5f4f0d58f1db41c0d8283add2940ca51895a",
+      "bytes": 476,
+      "dataset_version": "v20251030_115228"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/979c4282ad15/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115228/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "b869998dfc6f49987f5a512a4cedec9d8bc95fbf43bcb075924a43f68c1bcb60",
+      "bytes": 361190,
+      "dataset_version": "v20251030_115228",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/979c4282ad15/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115228/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "3648b730705c8c577bc8a134b09181bc4f61e6f198c4880f0cf6a3acf6c320a2",
+      "bytes": 46846,
+      "dataset_version": "v20251030_115228",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/979c4282ad15/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115228/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "639bf1e92c5fe7ba74e59a82afd3e38b9325771cc82b3bd01f6cc95b762fafce",
+      "bytes": 51380,
+      "dataset_version": "v20251030_115228",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/9d76f4a4af29/README.md",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115250/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "16d2461e8241fd4de5ba3c336907aa65717a9b7f9517ec61a67ed0b4fb643d59",
+      "bytes": 1250,
+      "dataset_version": "v20251030_115250"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/9d76f4a4af29/dataset_metadata.json",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115250/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "4c7918460248668d2a38047589369b30956e4a6d9c21e30a5c4bb469f33fa2d8",
+      "bytes": 476,
+      "dataset_version": "v20251030_115250"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/9d76f4a4af29/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115250/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "cec3be449f7441dc02951227f5493830203eb1371bf93a2c8d364de98b951652",
+      "bytes": 102251,
+      "dataset_version": "v20251030_115250",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/9d76f4a4af29/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115250/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "33e7ba4c7bf4556aa391ae3c4cb8cc11ebeeadfadd0a6970643db4ed25cd7576",
+      "bytes": 17078,
+      "dataset_version": "v20251030_115250",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_urgency_dataset/resolve/9d76f4a4af29/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_urgency_dataset/v20251030_115250/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "b897ef7f95c06ef6ebec2e7b9721ac8c5095a3357ff407661475f261ce4d532e",
+      "bytes": 14271,
+      "dataset_version": "v20251030_115250",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/4931835a4641/README.md",
+      "path": "datasets/misclassified_department_dataset/v20251028_012945/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "c4ceba9b3c2df986922e5512793cca135d8f1b2d68499ec0b6d953607e523f07",
+      "bytes": 1398,
+      "dataset_version": "v20251028_012945"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/4931835a4641/dataset_metadata.json",
+      "path": "datasets/misclassified_department_dataset/v20251028_012945/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "784eca7d0799a53e7da792c37f3a6f166028c49ba07325c2ab1cc219c38b1e37",
+      "bytes": 488,
+      "dataset_version": "v20251028_012945"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/4931835a4641/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_012945/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "33170c409f89f23ce503add9f599b940546e1beb3bbf5f08c56902655937b8d3",
+      "bytes": 864751,
+      "dataset_version": "v20251028_012945",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/4931835a4641/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_012945/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "6e46c58356a23bb282f3e241ae7ebdd1470a85f620a9cf58efa0251a5890fd46",
+      "bytes": 109807,
+      "dataset_version": "v20251028_012945",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/4931835a4641/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_012945/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "33629a16fc14bdc6c4c548463834eef37780f75ea5710f867103805e819f1e97",
+      "bytes": 110598,
+      "dataset_version": "v20251028_012945",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/0062d1af3957/README.md",
+      "path": "datasets/misclassified_department_dataset/v20251028_015507/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "fe316248cb95b5ed98488d9dea237dbc8e1820b96b068db09fb62fd709ba38a0",
+      "bytes": 1398,
+      "dataset_version": "v20251028_015507"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/0062d1af3957/dataset_metadata.json",
+      "path": "datasets/misclassified_department_dataset/v20251028_015507/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "876a90536bd4d4cd593f396125cb4a7f93e5cbe896a6ce99102fa80f8022008c",
+      "bytes": 488,
+      "dataset_version": "v20251028_015507"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/0062d1af3957/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_015507/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "6dfebc06bc5824fc5736555379be2d23071216dc68bfa70a474be9e6510fbf45",
+      "bytes": 369549,
+      "dataset_version": "v20251028_015507",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/0062d1af3957/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_015507/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "92595cfe7da9a57cd8affa9d29e5cb8381cd3da9c533fd92baf9db702d22cfa5",
+      "bytes": 43869,
+      "dataset_version": "v20251028_015507",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/0062d1af3957/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_015507/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "56ea60e153f1d7fc82b74b1d6b3ff9c614685a276c4980cbce8e52cbfdeb5510",
+      "bytes": 45732,
+      "dataset_version": "v20251028_015507",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/3d0564c4813c/README.md",
+      "path": "datasets/misclassified_department_dataset/v20251028_015634/README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "3fc77823dd2d1c6010c187f30031d0d061e65c69d26c87087de3758442b1a0af",
+      "bytes": 1398,
+      "dataset_version": "v20251028_015634"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/3d0564c4813c/dataset_metadata.json",
+      "path": "datasets/misclassified_department_dataset/v20251028_015634/dataset_metadata.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "6909527043cbdfed3e6d8f522cd74d21161595cde92b506ad66ec84214657039",
+      "bytes": 488,
+      "dataset_version": "v20251028_015634"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/3d0564c4813c/data/train-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_015634/train.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "c8f85ad179833f5842323e08a4f6f2dd8c4fd98bd3787d73ade55d8f6e419311",
+      "bytes": 397659,
+      "dataset_version": "v20251028_015634",
+      "split": "train"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/3d0564c4813c/data/eval-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_015634/eval.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "11655c535349c5f3c08b6b7637fbe43135962a1a6869d735fabd3ca892e9635c",
+      "bytes": 57272,
+      "dataset_version": "v20251028_015634",
+      "split": "eval"
+    },
+    {
+      "url": "https://huggingface.co/datasets/sambodhan/misclassified_department_dataset/resolve/3d0564c4813c/data/test-00000-of-00001.parquet",
+      "path": "datasets/misclassified_department_dataset/v20251028_015634/test.parquet",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "1fa4aba937d72e80c3d367ff610175f4c807ca5e5bf493fd871ee7001d342102",
+      "bytes": 54169,
+      "dataset_version": "v20251028_015634",
+      "split": "test"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/19466adb6226fbd2a9abe85cd1027f6e14f5f64e/README.md",
+      "path": "promotion_cards/urgency__v20251028_150816__19466adb6226__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "abd17ffd389bc529295d2c50178308646ff9102e7858b062e62f7f9a259dabc4",
+      "bytes": 2599,
+      "promotion_commit": "19466adb6226fbd2a9abe85cd1027f6e14f5f64e",
+      "promotion_version": "v20251028_150816",
+      "promotion_date_utc": "2025-10-28T15:08:24.000Z",
+      "note": "model card as it stood at auto-deploy commit 19466adb6226 (urgency)"
+    },
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/e04b4076b90cfdf56e0643a61d035fc9ca7f0e22/README.md",
+      "path": "promotion_cards/urgency__v20251030_114839__e04b4076b90c__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "cf4b4ce95251e24fa2890fa6f78ad8b39b74bf79a2e1133d47249ed6892f4214",
+      "bytes": 2439,
+      "promotion_commit": "e04b4076b90cfdf56e0643a61d035fc9ca7f0e22",
+      "promotion_version": "v20251030_114839",
+      "promotion_date_utc": "2025-10-30T11:48:53.000Z",
+      "note": "model card as it stood at auto-deploy commit e04b4076b90c (urgency)"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/6d3c6bab5debd75eec30669f9bc447eaea0fe153/README.md",
+      "path": "promotion_cards/department__v20251023_011818__6d3c6bab5deb__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "65f6155d46b84871c4153ce4943f64ba0a53cfd98fd661ae26c8360dd3fa23b5",
+      "bytes": 2303,
+      "promotion_commit": "6d3c6bab5debd75eec30669f9bc447eaea0fe153",
+      "promotion_version": "v20251023_011818",
+      "promotion_date_utc": "2025-10-23T01:19:29.000Z",
+      "note": "model card as it stood at auto-deploy commit 6d3c6bab5deb (department)"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/adce36aeaccb9f8247654f19572b7c742c1eef7b/README.md",
+      "path": "promotion_cards/department__v20251023_012846__adce36aeaccb__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "5dba6fec31be60757c5671ec3ad00192ad9fbd7e6d69c1518c8a57e5196d4cfb",
+      "bytes": 2783,
+      "promotion_commit": "adce36aeaccb9f8247654f19572b7c742c1eef7b",
+      "promotion_version": "v20251023_012846",
+      "promotion_date_utc": "2025-10-23T01:29:43.000Z",
+      "note": "model card as it stood at auto-deploy commit adce36aeaccb (department)"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/f6de956428cbd02d372bf657c17de794fe375206/README.md",
+      "path": "promotion_cards/department__v20251027_123835__f6de956428cb__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "e24ac23b3e52a0e2022802812638c1c59f1e52095d3beaf0eda7fe8ea5b88ead",
+      "bytes": 2305,
+      "promotion_commit": "f6de956428cbd02d372bf657c17de794fe375206",
+      "promotion_version": "v20251027_123835",
+      "promotion_date_utc": "2025-10-27T12:38:48.000Z",
+      "note": "model card as it stood at auto-deploy commit f6de956428cb (department)"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/fc1c84c4bfad356ae4a4c006dfdf0f0c548f7f27/README.md",
+      "path": "promotion_cards/department__v20251027_133806__fc1c84c4bfad__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "9c5dae05d8a0ec341d9374035a928ea32ec8989a34b6f9cf89ba7cd1d234b6b7",
+      "bytes": 2465,
+      "promotion_commit": "fc1c84c4bfad356ae4a4c006dfdf0f0c548f7f27",
+      "promotion_version": "v20251027_133806",
+      "promotion_date_utc": "2025-10-27T13:38:16.000Z",
+      "note": "model card as it stood at auto-deploy commit fc1c84c4bfad (department)"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/2064bafde9d4cf102e5401bd6d31362596d10425/README.md",
+      "path": "promotion_cards/department__v20251027_143006__2064bafde9d4__README.md",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "f37d044c532262ffc2ae7c9f8f332000bcbc0219132d0b90bae2456df85521b9",
+      "bytes": 2284,
+      "promotion_commit": "2064bafde9d4cf102e5401bd6d31362596d10425",
+      "promotion_version": "v20251027_143006",
+      "promotion_date_utc": "2025-10-27T14:30:20.000Z",
+      "note": "model card as it stood at auto-deploy commit 2064bafde9d4 (department)"
+    },
+    {
+      "url": "https://huggingface.co/api/models?author=sambodhan&full=true",
+      "path": "org_sambodhan_models.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "af9225c74cbf6e987e96df5f0d5c70ab8bd118032ed656cd548b77dc1378d9c1",
+      "bytes": 3815
+    },
+    {
+      "url": "https://huggingface.co/api/datasets?author=sambodhan&full=true",
+      "path": "org_sambodhan_datasets.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "dab2d7fd80dafe8cf51035e9c6ce11a3e6195b063f1728c59b3596413ee65b17",
+      "bytes": 3234
+    },
+    {
+      "url": "https://huggingface.co/api/spaces?author=sambodhan&full=true",
+      "path": "org_sambodhan_spaces.json",
+      "resolved_commit_sha": null,
+      "retrieved_utc": "2026-08-11T19:08:39Z",
+      "sha256": "775e0b6e21a4995c6009ef8dd5086bad25abe9ecda54f84841625ca439ed7391",
+      "bytes": 4088
+    }
+  ],
+  "items_captured": 73,
+  "items_absent_at_revision": [
+    {
+      "url": "https://huggingface.co/kar137/sambodhan-urgency-classifier/resolve/e3a249c1ff8e/model_metadata.json",
+      "reason": "HTTP error (curl --fail); for these repositories this is a 404 -- the file does not exist at this revision"
+    },
+    {
+      "url": "https://huggingface.co/mr-kush/sambodhan-department-classification-model/resolve/main/training_metadata.json",
+      "reason": "HTTP error (curl --fail); for these repositories this is a 404 -- the file does not exist at this revision"
+    }
+  ]
+}

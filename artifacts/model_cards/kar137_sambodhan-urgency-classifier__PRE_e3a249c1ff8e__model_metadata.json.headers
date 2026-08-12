@@ -1,0 +1,46 @@
+HTTP/1.1 307 Temporary Redirect
+Content-Type: text/plain; charset=utf-8
+Content-Length: 115
+Connection: keep-alive
+Date: Tue, 11 Aug 2026 19:08:36 GMT
+Location: /sambodhan/sambodhan_urgency_classifier/resolve/e3a249c1ff8e/model_metadata.json
+X-Powered-By: huggingface-moon
+X-Request-Id: Root=1-6a7b7334-7a2b17533c192741115e8506
+RateLimit: "resolvers";r=2999;t=12
+RateLimit-Policy: "fixed window";"resolvers";q=3000;w=300
+cross-origin-opener-policy: same-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Access-Control-Max-Age: 86400
+Access-Control-Allow-Origin: https://huggingface.co
+Vary: Origin, Accept
+Access-Control-Expose-Headers: X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash
+X-Cache: Miss from cloudfront
+Via: 1.1 46508a87a6cc058f9886696605629398.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: BOM78-P10
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: KpOQy6CU3Z9b5jfZWocn3NR8fD2Wb_jmoVgo-1Cvs4XcBymoGtVrzA==
+
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+Content-Length: 15
+Connection: keep-alive
+Date: Tue, 11 Aug 2026 19:08:36 GMT
+ETag: W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"
+X-Powered-By: huggingface-moon
+X-Request-Id: Root=1-6a7b7334-21636daf4ce56cac5b513c02
+RateLimit: "resolvers";r=2998;t=12
+RateLimit-Policy: "fixed window";"resolvers";q=3000;w=300
+cross-origin-opener-policy: same-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Access-Control-Max-Age: 86400
+Access-Control-Allow-Origin: https://huggingface.co
+Vary: Origin
+Access-Control-Expose-Headers: X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash
+X-Error-Code: EntryNotFound
+X-Error-Message: Entry not found
+X-Cache: Error from cloudfront
+Via: 1.1 46508a87a6cc058f9886696605629398.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: BOM78-P10
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: pvAX-hIxHKRbd-e2pp-hMmnViJkCjOZ1WEyK8mPtTv3RS7LfncTURQ==
+

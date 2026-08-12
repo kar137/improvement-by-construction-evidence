@@ -1,0 +1,82 @@
+{
+  "purpose": "Pinned revisions for experiment X1, with a record of why the department model contributes no PRE revision.",
+  "tasks": {
+    "urgency": {
+      "repo": "kar137/sambodhan-urgency-classifier",
+      "canonical_repo_after_redirect": "sambodhan/sambodhan_urgency_classifier",
+      "n_commits": 19,
+      "n_auto_deploy_commits": 2,
+      "first_auto_deploy": {
+        "commit": "19466adb6226fbd2a9abe85cd1027f6e14f5f64e",
+        "date_utc": "2025-10-28T15:08:24.000Z",
+        "title": "Auto-deploy: ΔF1 >= 0.0010 (v20251028_150816)"
+      },
+      "POST": {
+        "commit": "2e3ae2505f15784bd7866abcda1d6655a4f19575",
+        "date_utc": "2025-10-30T11:48:55.000Z",
+        "title": "Upload model_metadata.json (v20251030_114839)",
+        "role": "current HEAD"
+      },
+      "PRE": {
+        "commit": "e3a249c1ff8e6d45eadbd9f303fa397030e8501f",
+        "date_utc": "2025-10-10T17:24:12.000Z",
+        "title": "Delete runs/Oct10_13-34-41",
+        "role": "last commit before the first Auto-deploy commit",
+        "files_at_revision": [
+          ".gitattributes",
+          "README.md",
+          "config.json",
+          "confusion_matrix.png",
+          "model.safetensors",
+          "runs/eval_Oct10_17-21-24/classification_report.txt",
+          "runs/eval_Oct10_17-21-24/confidence_histogram.png",
+          "runs/eval_Oct10_17-21-24/confusion_matrix.png",
+          "runs/eval_Oct10_17-21-24/confusion_matrix_normalized.png",
+          "runs/eval_Oct10_17-21-24/events.out.tfevents.1760116884.8757fb3e1547.17464.0",
+          "runs/eval_Oct10_17-21-24/metrics.csv",
+          "runs/eval_Oct10_17-21-24/metrics.json",
+          "runs/eval_Oct10_17-21-24/misclassified.csv",
+          "runs/eval_Oct10_17-21-24/stepwise_metrics.png",
+          "runs/eval_Oct10_17-21-24/true_label_distribution.png",
+          "sentencepiece.bpe.model",
+          "special_tokens_map.json",
+          "tokenizer_config.json",
+          "training_args.bin",
+          "training_metadata.json"
+        ],
+        "contains_model_weights": true
+      },
+      "pre_status": "USABLE -- weights present; 25784.2 minutes before the first auto-deploy"
+    },
+    "department": {
+      "repo": "mr-kush/sambodhan-department-classification-model",
+      "canonical_repo_after_redirect": "mr-kush/sambodhan-department-classification-model",
+      "n_commits": 11,
+      "n_auto_deploy_commits": 5,
+      "first_auto_deploy": {
+        "commit": "6d3c6bab5debd75eec30669f9bc447eaea0fe153",
+        "date_utc": "2025-10-23T01:19:29.000Z",
+        "title": "Auto-deploy: ΔF1 >= 0.0000 (v20251023_011818)"
+      },
+      "POST": {
+        "commit": "6ee5be28d459aef090fa55cef206cc5ff9940378",
+        "date_utc": "2025-10-27T14:30:20.000Z",
+        "title": "Upload model_metadata.json (v20251027_143006)",
+        "role": "current HEAD"
+      },
+      "PRE": {
+        "commit": "5c5140c56f5251f21baf720ffb1abe8be14f4aed",
+        "date_utc": "2025-10-23T01:15:40.000Z",
+        "title": "initial commit",
+        "role": "last commit before the first Auto-deploy commit",
+        "files_at_revision": [
+          ".gitattributes"
+        ],
+        "contains_model_weights": false
+      },
+      "pre_status": "TIMESTAMP PRECEDES BY 3.8 MINUTES BUT THE TREE CONTAINS NO MODEL WEIGHTS (.gitattributes). No pre-loop revision is recoverable for this task."
+    }
+  },
+  "x1_scope": "X1 evaluates the urgency classifier only. The department model has no recoverable pre-loop revision: its initial commit predates the first auto-deploy by roughly four minutes but contains only .gitattributes.",
+  "p15_artifact_family_note": "The audit flagged (P15) that model_metadata.json targets hub_model_id `sambodhan/sambodhan_urgency_classifier` while the auto-deploy commits landed on `kar137/...`. Resolving the Hub redirect shows these are the SAME repository: `kar137/sambodhan-urgency-classifier` canonically resolves to `sambodhan/sambodhan_urgency_classifier`. The department repo does not redirect. This removes the urgency half of the artifact-family ambiguity."
+}

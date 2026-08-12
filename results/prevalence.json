@@ -1,0 +1,103 @@
+{
+  "task": "F -- prevalence search",
+  "accessed": "2026-08-12",
+  "timebox": "~90 minutes, as specified. Sampled, not exhaustive.",
+  "methods": [
+    {
+      "probe": "Hugging Face model search for auto-deploy / delta-F1 commit-message patterns",
+      "result": "NEGATIVE, and structurally uninformative: the Hub search API indexes model IDs and card text, not commit messages. Three unrelated repositories matched the literal string 'Auto-deploy' in their names. This probe cannot detect the signature even where it exists; per-repo commit fetches would be required, and the Hub offers no way to enumerate candidates. Recorded as a method limitation, NOT as evidence of absence."
+    },
+    {
+      "probe": "GitHub code search for the structural signature",
+      "result": "POSITIVE. Queries combining feedback/misclassification-derived corpora with F1-threshold promotion returned 9-35 hits each; six were read in full."
+    },
+    {
+      "probe": "Web search for MLOps guidance recommending 'retrain on flagged mistakes'",
+      "result": "POSITIVE and abundant. Retraining on user-flagged errors and champion-challenger promotion on an F1 comparison are both presented as standard practice across vendor and tutorial material. The guidance that a stationary, uncontaminated holdout is required is present in some sources and absent in others."
+    }
+  ],
+  "candidates": [
+    {
+      "name": "ismaeeeelshaikh/logguard",
+      "url": "https://github.com/ismaeeeelshaikh/logguard/blob/main/ml/airflow_dags/weekly_retrain_dag.py",
+      "artifact": "ml/airflow_dags/weekly_retrain_dag.py (232 lines)",
+      "corpus_is_error_conditioned": true,
+      "corpus_evidence": "L60-62: `SELECT COUNT(*) FROM anomaly_feedback ... AND feedback_type IN ('true_positive','false_positive')`; L82-85: `fetch_feedback_dataset(days_back=30)`. The retraining corpus is drawn entirely from analyst verdicts on the incumbent's own alerts, so it is conditioned on the incumbent's output.",
+      "stationary_holdout": false,
+      "holdout_evidence": "No fixed evaluation set is constructed anywhere in the DAG. `new_f1` is read from the new run's own metrics (L147) and `prod_f1` from the registered production model's run metrics, so the two numbers were computed on different, separately error-conditioned feedback windows.",
+      "promotion_automated": true,
+      "promotion_evidence": "L129 `_promote_if_better(client, model_name)`; L180 `if new_f1 > prod_f1 + 0.01:` promotes via the MLflow registry, invoked from an Airflow DAG scheduled weekly (L40). No human in the loop.",
+      "fail_open_analogue": "L161-167: 'No production model yet -- promote directly (first deployment)'. An unconditional-acceptance branch of the same kind as model_pipeline.py:443.",
+      "verdict": "CLOSEST MATCH FOUND. Composes error-conditioned corpus + automated threshold promotion + an unconditional-acceptance branch. Differs from Sambodhan in that the incumbent is not re-queried live, and no versioned corpora or promotion artifacts are published, so the loop's history is not externally inspectable."
+    },
+    {
+      "name": "Youssef-Guiga/spam-detection-api",
+      "url": "https://github.com/Youssef-Guiga/spam-detection-api/blob/main/training/retraining_pipeline.py",
+      "artifact": "training/retraining_pipeline.py (~510 lines)",
+      "corpus_is_error_conditioned": true,
+      "corpus_evidence": "L69-73 `collect_feedback_data()` queries the `PredictionFeedback` table; the entire corpus is user feedback on the incumbent's predictions.",
+      "stationary_holdout": false,
+      "holdout_evidence": "L137 `train_test_split(...)` splits that same feedback pool. L168 `evaluate_current_model_performance(feedback_df)` scores the INCUMBENT on the feedback DataFrame; L291 `evaluate_new_model(model_path, X_val_texts, y_val_labels)` scores the challenger on the validation split of the same pool. Both models are measured on error-conditioned data; no stationary holdout exists.",
+      "promotion_automated": false,
+      "promotion_evidence": "L389 `\"should_deploy\": new_metrics['accuracy'] > old_metrics['accuracy'] and new_metrics['f1'] > old_metrics['f1']` -- the same comparison structure. But L449 reads `# Placeholder: Add actual deployment steps here if automated`, so the decision is advisory and no model is actually promoted.",
+      "verdict": "STRONG PARTIAL MATCH on the evaluation defect -- the incumbent is scored on a corpus derived from its own errors and the promotion criterion is a comparison over that corpus -- but execution is not autonomous."
+    },
+    {
+      "name": "swagatobauri/TARS---Threat-Analysis-Response-System",
+      "url": "https://github.com/swagatobauri/TARS---Threat-Analysis-Response-System/blob/main/backend/app/ml/adaptive.py",
+      "artifact": "backend/app/ml/adaptive.py (314 lines)",
+      "corpus_is_error_conditioned": true,
+      "corpus_evidence": "L125-135: model updater 'collects analyst feedback and triggers retraining', keyed on `tars:feedback:count`.",
+      "stationary_holdout": false,
+      "holdout_evidence": "L187 `new_f1 = 0.85` is a HARDCODED constant, not a measurement.",
+      "promotion_automated": true,
+      "promotion_evidence": "L190 `if new_f1 > current_f1 - 0.02:` deploys. Note the sign: the gate accepts a challenger up to 2 F1 points WORSE than the incumbent, by explicit design.",
+      "verdict": "PARTIAL MATCH, but the metric is a hardcoded placeholder, so this is an unfinished implementation rather than an operating loop. Included because the gate deliberately tolerates regression -- an independent instance of a promotion criterion that cannot detect degradation."
+    },
+    {
+      "name": "Kaif-Anwar/PakSentinel",
+      "url": "https://github.com/Kaif-Anwar/PakSentinel/blob/main/scripts/promote_model.py",
+      "artifact": "scripts/promote_model.py (76 lines)",
+      "corpus_is_error_conditioned": false,
+      "corpus_evidence": "No feedback-derived corpus; models are trained conventionally.",
+      "stationary_holdout": false,
+      "holdout_evidence": "L28/L44: `staging_f1` and `prod_f1` are both `run.data.metrics['f1_weighted']` read from each model's OWN MLflow run, i.e. computed on whatever data that run used. The comparison is between two numbers that need not share an evaluation set.",
+      "promotion_automated": true,
+      "promotion_evidence": "L63 `if staging_f1 >= prod_f1 + min_improvement:` promotes to Production in the MLflow registry.",
+      "verdict": "NOT A MATCH for error-conditioned evaluation, but an independent instance of the adjacent defect: automated promotion on a comparison of metrics that are not guaranteed commensurable."
+    },
+    {
+      "name": "aarushigupta22/drift-doctor",
+      "url": "https://github.com/aarushigupta22/drift-doctor/blob/main/ml/validator.py",
+      "artifact": "ml/validator.py (210 lines)",
+      "corpus_is_error_conditioned": false,
+      "corpus_evidence": "n/a",
+      "stationary_holdout": true,
+      "holdout_evidence": "L79: 'Compare deployed (reference) model vs candidate on a held-out production window' -- both models scored on the SAME held-out data.",
+      "promotion_automated": false,
+      "promotion_evidence": "L14 `deployment_recommendation(...)` returns a recommendation; no registry write.",
+      "verdict": "NEGATIVE CONTROL -- included deliberately. This project does the comparison correctly (common held-out window, advisory output), which shows the correct pattern is also present in public code and that the defect is not universal."
+    },
+    {
+      "name": "TianPan.co -- 'Training Data Self-Poisoning: When Your AI Feature Corrupts Its Own Ground Truth' (2026-05-06)",
+      "url": "https://tianpan.co/blog/2026-05-06-training-data-self-poisoning-feedback-loop",
+      "artifact": "practitioner account, not code",
+      "corpus_is_error_conditioned": true,
+      "corpus_evidence": "Describes models retrained on AI-generated notes showing apparent improvement on standard metrics because evaluation came from the same contaminated distribution; degradation appeared only on authentic out-of-loop data.",
+      "stationary_holdout": false,
+      "holdout_evidence": "The account's central point is the absence of uncontaminated ground truth.",
+      "promotion_automated": null,
+      "promotion_evidence": "NOT ESTABLISHED from the account.",
+      "verdict": "INDEPENDENT PRACTITIONER ACCOUNT of the same evaluation-contamination mechanism in a different domain. No code, no artifacts, no verifiable numbers -- usable as related work, not as a second data point."
+    }
+  ],
+  "tally": {
+    "full_pattern_error_conditioned_corpus_AND_automated_promotion": 1,
+    "error_conditioned_evaluation_but_promotion_advisory": 2,
+    "automated_promotion_on_incommensurable_metrics_but_not_error_conditioned": 1,
+    "correct_implementations_found": 1,
+    "practitioner_accounts": 1
+  },
+  "conclusion": "The individual ingredients are common in public code: retraining corpora assembled entirely from user-flagged errors, promotion gated on an F1 comparison against the incumbent, and unconditional-acceptance branches all appear independently. One project (ismaeeeelshaikh/logguard) composes all three and executes them autonomously on a weekly Airflow schedule, which establishes that the composition is not unique to Sambodhan.\n\nHowever, no other project was found in which the corpus-construction code, the gate code, the VERSIONED corpora the gate ran on, the timestamped promotion decisions, and the resulting model artifacts are ALL publicly inspectable. That combination is what makes this case measurable, and it remains n=1.\n\nThe paper should therefore be framed as an artifact-complete post-mortem of a single system, and should cite the prevalence search as evidence that the composition is reachable by ordinary engineering practice -- not as evidence of a measured base rate. No base rate is claimed: the search was timeboxed, sampled, and limited to public code whose search surface does not index the most diagnostic signal (commit messages).",
+  "honesty_note": "Candidates were not padded. Repositories that merely retrain on feedback without gating promotion on the incumbent were excluded, and one correct implementation was included deliberately as a negative control."
+}

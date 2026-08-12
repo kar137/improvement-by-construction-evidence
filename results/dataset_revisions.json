@@ -1,0 +1,517 @@
+{
+  "question": "Do dataset revisions exist whose timestamps precede each model promotion, so that each promotion can be attributed to the corpus it was actually gated on?",
+  "method": "Promotion times and dataset-version times are read from the archived Hub commit histories. A promotion is attributed to the latest dataset version whose parquet-push commit strictly precedes it.",
+  "tasks": {
+    "urgency": {
+      "model_repo_commits_file": "commits_models_kar137_sambodhan-urgency-classifier.json",
+      "dataset_repo": "sambodhan/misclassified_urgency_dataset",
+      "dataset_repo_first_commit_utc": "2025-10-28T01:30:36Z",
+      "n_promotions": 2,
+      "n_published_dataset_versions": 6,
+      "attributions": [
+        {
+          "promotion_version": "v20251028_150816",
+          "promotion_commit": "19466adb6226fbd2a9abe85cd1027f6e14f5f64e",
+          "promotion_date_utc": "2025-10-28T15:08:24.000Z",
+          "threshold": 0.001,
+          "attributable_dataset_version": "v20251028_015640",
+          "attributable_dataset_commit": "e4914bb5006c092ffd554d974f7c4bb7577eae7d",
+          "attributable_dataset_data_utc": "2025-10-28T01:56:44Z",
+          "hours_before_promotion": 13.194,
+          "status": "ATTRIBUTED"
+        },
+        {
+          "promotion_version": "v20251030_114839",
+          "promotion_commit": "e04b4076b90cfdf56e0643a61d035fc9ca7f0e22",
+          "promotion_date_utc": "2025-10-30T11:48:53.000Z",
+          "threshold": 0.001,
+          "attributable_dataset_version": "v20251030_111553",
+          "attributable_dataset_commit": "99ece0015d193fcd1aaff3bab1e1b2a51c490ae4",
+          "attributable_dataset_data_utc": "2025-10-30T11:16:03Z",
+          "hours_before_promotion": 0.547,
+          "status": "ATTRIBUTED"
+        }
+      ],
+      "measurements": {
+        "v20251028_013035": {
+          "version": "v20251028_013035",
+          "rows_total": 8426,
+          "rows_split": {
+            "train": 6740,
+            "eval": 843,
+            "test": 843
+          },
+          "class_balance_all": {
+            "1": 3279,
+            "0": 2613,
+            "2": 2534
+          },
+          "class_balance_train": {
+            "1": 2623,
+            "0": 2090,
+            "2": 2027
+          },
+          "train_test_overlap_pct": 17.9122,
+          "overlap_with_original_6000_pct": 71.0895,
+          "internal_duplicate_pct": 12.7581,
+          "mean_chars": 178.5,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 843,
+              "acc": 0.9146,
+              "macro_f1": 0.9163
+            },
+            "test": {
+              "n": 843,
+              "acc": 0.9039,
+              "macro_f1": 0.9055
+            }
+          },
+          "data_push_utc": "2025-10-28T01:30:39Z",
+          "terminal_commit": "b4b24afd263d5f6f669496b42528becbb724b3e0"
+        },
+        "v20251028_015512": {
+          "version": "v20251028_015512",
+          "rows_total": 6000,
+          "rows_split": {
+            "train": 4800,
+            "eval": 600,
+            "test": 600
+          },
+          "class_balance_all": {
+            "1": 2438,
+            "0": 1836,
+            "2": 1726
+          },
+          "class_balance_train": {
+            "1": 1950,
+            "0": 1469,
+            "2": 1381
+          },
+          "train_test_overlap_pct": 20.0,
+          "overlap_with_original_6000_pct": 99.8333,
+          "internal_duplicate_pct": 14.2333,
+          "mean_chars": 128.02,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 600,
+              "acc": 0.945,
+              "macro_f1": 0.9458
+            },
+            "test": {
+              "n": 600,
+              "acc": 0.9367,
+              "macro_f1": 0.9381
+            }
+          },
+          "data_push_utc": "2025-10-28T01:55:15Z",
+          "terminal_commit": "c1522e890b093d7dde0b5165b2f3370027020842"
+        },
+        "v20251028_015640": {
+          "version": "v20251028_015640",
+          "rows_total": 2426,
+          "rows_split": {
+            "train": 1940,
+            "eval": 243,
+            "test": 243
+          },
+          "class_balance_all": {
+            "1": 841,
+            "2": 808,
+            "0": 777
+          },
+          "class_balance_train": {
+            "1": 673,
+            "2": 646,
+            "0": 621
+          },
+          "train_test_overlap_pct": 13.5802,
+          "overlap_with_original_6000_pct": 0.0,
+          "internal_duplicate_pct": 9.1096,
+          "mean_chars": 303.34,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 243,
+              "acc": 0.9177,
+              "macro_f1": 0.9186
+            },
+            "test": {
+              "n": 243,
+              "acc": 0.9218,
+              "macro_f1": 0.9224
+            }
+          },
+          "data_push_utc": "2025-10-28T01:56:44Z",
+          "terminal_commit": "e4914bb5006c092ffd554d974f7c4bb7577eae7d"
+        },
+        "v20251030_111553": {
+          "version": "v20251030_111553",
+          "rows_total": 1500,
+          "rows_split": {
+            "train": 1200,
+            "eval": 150,
+            "test": 150
+          },
+          "class_balance_all": {
+            "1": 516,
+            "2": 495,
+            "0": 489
+          },
+          "class_balance_train": {
+            "1": 413,
+            "2": 396,
+            "0": 391
+          },
+          "train_test_overlap_pct": 10.0,
+          "overlap_with_original_6000_pct": 0.0,
+          "internal_duplicate_pct": 5.7333,
+          "mean_chars": 302.36,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 150,
+              "acc": 0.8467,
+              "macro_f1": 0.8468
+            },
+            "test": {
+              "n": 150,
+              "acc": 0.8933,
+              "macro_f1": 0.8952
+            }
+          },
+          "data_push_utc": "2025-10-30T11:16:03Z",
+          "terminal_commit": "99ece0015d193fcd1aaff3bab1e1b2a51c490ae4"
+        },
+        "v20251030_115228": {
+          "version": "v20251030_115228",
+          "rows_total": 6000,
+          "rows_split": {
+            "train": 4800,
+            "eval": 600,
+            "test": 600
+          },
+          "class_balance_all": {
+            "1": 2438,
+            "0": 1836,
+            "2": 1726
+          },
+          "class_balance_train": {
+            "1": 1950,
+            "0": 1469,
+            "2": 1381
+          },
+          "train_test_overlap_pct": 20.0,
+          "overlap_with_original_6000_pct": 99.8333,
+          "internal_duplicate_pct": 14.2333,
+          "mean_chars": 128.02,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 600,
+              "acc": 0.945,
+              "macro_f1": 0.9458
+            },
+            "test": {
+              "n": 600,
+              "acc": 0.9367,
+              "macro_f1": 0.9381
+            }
+          },
+          "data_push_utc": "2025-10-30T11:52:35Z",
+          "terminal_commit": "979c4282ad1555599455ebade2eb3b9ba44987bb"
+        },
+        "v20251030_115250": {
+          "version": "v20251030_115250",
+          "rows_total": 1600,
+          "rows_split": {
+            "train": 1280,
+            "eval": 160,
+            "test": 160
+          },
+          "class_balance_all": {
+            "1": 623,
+            "2": 493,
+            "0": 484
+          },
+          "class_balance_train": {
+            "1": 499,
+            "2": 394,
+            "0": 387
+          },
+          "train_test_overlap_pct": 7.5,
+          "overlap_with_original_6000_pct": 99.5625,
+          "internal_duplicate_pct": 4.0625,
+          "mean_chars": 128.26,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 160,
+              "acc": 0.9187,
+              "macro_f1": 0.9209
+            },
+            "test": {
+              "n": 160,
+              "acc": 0.9187,
+              "macro_f1": 0.9206
+            }
+          },
+          "data_push_utc": "2025-10-30T11:53:00Z",
+          "terminal_commit": "9d76f4a4af297b0ab28e1659d93bb7b7e88f6559"
+        }
+      },
+      "verdict": "2/2 promotions have an attributable dataset revision. The timing caveat is RESOLVED for this task."
+    },
+    "department": {
+      "model_repo_commits_file": "commits_models_mr-kush_sambodhan-department-classification-model.json",
+      "dataset_repo": "sambodhan/misclassified_department_dataset",
+      "dataset_repo_first_commit_utc": "2025-10-28T01:21:03Z",
+      "n_promotions": 5,
+      "n_published_dataset_versions": 3,
+      "attributions": [
+        {
+          "promotion_version": "v20251023_011818",
+          "promotion_commit": "6d3c6bab5debd75eec30669f9bc447eaea0fe153",
+          "promotion_date_utc": "2025-10-23T01:19:29.000Z",
+          "threshold": 0.0,
+          "attributable_dataset_version": null,
+          "attributable_dataset_commit": null,
+          "attributable_dataset_data_utc": null,
+          "hours_before_promotion": null,
+          "status": "NO PRECEDING DATASET REVISION EXISTS"
+        },
+        {
+          "promotion_version": "v20251023_012846",
+          "promotion_commit": "adce36aeaccb9f8247654f19572b7c742c1eef7b",
+          "promotion_date_utc": "2025-10-23T01:29:43.000Z",
+          "threshold": 0.0,
+          "attributable_dataset_version": null,
+          "attributable_dataset_commit": null,
+          "attributable_dataset_data_utc": null,
+          "hours_before_promotion": null,
+          "status": "NO PRECEDING DATASET REVISION EXISTS"
+        },
+        {
+          "promotion_version": "v20251027_123835",
+          "promotion_commit": "f6de956428cbd02d372bf657c17de794fe375206",
+          "promotion_date_utc": "2025-10-27T12:38:48.000Z",
+          "threshold": 0.001,
+          "attributable_dataset_version": null,
+          "attributable_dataset_commit": null,
+          "attributable_dataset_data_utc": null,
+          "hours_before_promotion": null,
+          "status": "NO PRECEDING DATASET REVISION EXISTS"
+        },
+        {
+          "promotion_version": "v20251027_133806",
+          "promotion_commit": "fc1c84c4bfad356ae4a4c006dfdf0f0c548f7f27",
+          "promotion_date_utc": "2025-10-27T13:38:16.000Z",
+          "threshold": 0.001,
+          "attributable_dataset_version": null,
+          "attributable_dataset_commit": null,
+          "attributable_dataset_data_utc": null,
+          "hours_before_promotion": null,
+          "status": "NO PRECEDING DATASET REVISION EXISTS"
+        },
+        {
+          "promotion_version": "v20251027_143006",
+          "promotion_commit": "2064bafde9d4cf102e5401bd6d31362596d10425",
+          "promotion_date_utc": "2025-10-27T14:30:20.000Z",
+          "threshold": 0.001,
+          "attributable_dataset_version": null,
+          "attributable_dataset_commit": null,
+          "attributable_dataset_data_utc": null,
+          "hours_before_promotion": null,
+          "status": "NO PRECEDING DATASET REVISION EXISTS"
+        }
+      ],
+      "measurements": {
+        "v20251028_012945": {
+          "version": "v20251028_012945",
+          "rows_total": 8426,
+          "rows_split": {
+            "train": 6740,
+            "eval": 843,
+            "test": 843
+          },
+          "class_balance_all": {
+            "3": 2756,
+            "2": 1910,
+            "1": 1894,
+            "0": 1866
+          },
+          "class_balance_train": {
+            "3": 2204,
+            "2": 1528,
+            "1": 1515,
+            "0": 1493
+          },
+          "train_test_overlap_pct": 20.6406,
+          "overlap_with_original_6000_pct": 71.0895,
+          "internal_duplicate_pct": 12.7581,
+          "mean_chars": 178.5,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 843,
+              "acc": 0.9727,
+              "macro_f1": 0.9722
+            },
+            "test": {
+              "n": 843,
+              "acc": 0.9668,
+              "macro_f1": 0.9667
+            }
+          },
+          "data_push_utc": "2025-10-28T01:21:24Z",
+          "terminal_commit": "4931835a46414fec644347088459efed9f4193ee"
+        },
+        "v20251028_015507": {
+          "version": "v20251028_015507",
+          "rows_total": 6000,
+          "rows_split": {
+            "train": 4800,
+            "eval": 600,
+            "test": 600
+          },
+          "class_balance_all": {
+            "3": 2141,
+            "2": 1310,
+            "1": 1293,
+            "0": 1256
+          },
+          "class_balance_train": {
+            "3": 1713,
+            "2": 1048,
+            "1": 1034,
+            "0": 1005
+          },
+          "train_test_overlap_pct": 19.1667,
+          "overlap_with_original_6000_pct": 99.8333,
+          "internal_duplicate_pct": 14.2333,
+          "mean_chars": 128.02,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 600,
+              "acc": 0.965,
+              "macro_f1": 0.965
+            },
+            "test": {
+              "n": 600,
+              "acc": 0.965,
+              "macro_f1": 0.9648
+            }
+          },
+          "data_push_utc": "2025-10-28T01:55:10Z",
+          "terminal_commit": "0062d1af3957213760623dd589aed888c448143f"
+        },
+        "v20251028_015634": {
+          "version": "v20251028_015634",
+          "rows_total": 2426,
+          "rows_split": {
+            "train": 1940,
+            "eval": 243,
+            "test": 243
+          },
+          "class_balance_all": {
+            "3": 615,
+            "0": 610,
+            "1": 601,
+            "2": 600
+          },
+          "class_balance_train": {
+            "3": 492,
+            "0": 488,
+            "2": 480,
+            "1": 480
+          },
+          "train_test_overlap_pct": 13.5802,
+          "overlap_with_original_6000_pct": 0.0,
+          "internal_duplicate_pct": 9.1096,
+          "mean_chars": 303.34,
+          "tfidf_char_logreg": {
+            "eval": {
+              "n": 243,
+              "acc": 1.0,
+              "macro_f1": 1.0
+            },
+            "test": {
+              "n": 243,
+              "acc": 1.0,
+              "macro_f1": 1.0
+            }
+          },
+          "data_push_utc": "2025-10-28T01:56:38Z",
+          "terminal_commit": "3d0564c4813c761f6c60b17de1982b8d624d7a06"
+        }
+      },
+      "verdict": "0/5 promotions have an attributable dataset revision. The dataset repository's first commit (2025-10-28T01:21:03+00:00) post-dates every promotion, so NO revision contemporaneous with any promotion exists. The timing caveat stands and is sharpened: the measured corpus provably post-dates all promotions."
+    }
+  },
+  "cross_task_identity": {
+    "finding": "At every revision pushed in the same minute, the urgency and department retraining corpora contain the SAME set of texts and differ only in the `label` column. The two 'task-specific' error-conditioned corpora are one pool of complaints labelled twice.",
+    "pairs": [
+      {
+        "urgency_version": "v20251028_013035",
+        "department_version": "v20251028_012945",
+        "urgency_rows": 8426,
+        "department_rows": 8426,
+        "urgency_unique_texts": 7351,
+        "department_unique_texts": 7351,
+        "shared_unique_texts": 7351,
+        "pct_of_urgency": 100.0,
+        "pct_of_department": 100.0,
+        "urgency_label_dist": {
+          "1": 3279,
+          "0": 2613,
+          "2": 2534
+        },
+        "department_label_dist": {
+          "3": 2756,
+          "2": 1910,
+          "1": 1894,
+          "0": 1866
+        }
+      },
+      {
+        "urgency_version": "v20251028_015512",
+        "department_version": "v20251028_015507",
+        "urgency_rows": 6000,
+        "department_rows": 6000,
+        "urgency_unique_texts": 5146,
+        "department_unique_texts": 5146,
+        "shared_unique_texts": 5146,
+        "pct_of_urgency": 100.0,
+        "pct_of_department": 100.0,
+        "urgency_label_dist": {
+          "1": 2438,
+          "0": 1836,
+          "2": 1726
+        },
+        "department_label_dist": {
+          "3": 2141,
+          "2": 1310,
+          "1": 1293,
+          "0": 1256
+        }
+      },
+      {
+        "urgency_version": "v20251028_015640",
+        "department_version": "v20251028_015634",
+        "urgency_rows": 2426,
+        "department_rows": 2426,
+        "urgency_unique_texts": 2205,
+        "department_unique_texts": 2205,
+        "shared_unique_texts": 2205,
+        "pct_of_urgency": 100.0,
+        "pct_of_department": 100.0,
+        "urgency_label_dist": {
+          "1": 841,
+          "2": 808,
+          "0": 777
+        },
+        "department_label_dist": {
+          "3": 615,
+          "0": 610,
+          "1": 601,
+          "2": 600
+        }
+      }
+    ]
+  }
+}
