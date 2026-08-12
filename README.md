@@ -37,7 +37,7 @@ pipeline reported about itself.
 | `results/*.json` | machine-readable outputs; the paper's figures read their values from these rather than hard-coding them |
 | `artifacts/` | archived external artifacts with `MANIFEST.json` giving URL, resolved commit, SHA-256, byte size and UTC retrieval timestamp for each of 73 items |
 | `figures/` | the gate acceptance figure |
-| `data/` | derived data, see the exclusion note below |
+| `data/` | absent by design: its only file was the gold slice, excluded below |
 
 ## Deliberately excluded
 
